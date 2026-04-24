@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+<section class="hero" id="about">
+  <div class="hero-photo">
+    <img src="/assets/images/photo.jpg" alt="Ritu">
+  </div>
+  <div class="hero-text">
+    <h1 class="hero-name">Ritu Raj</h1>
+    <p class="hero-role">Aspiring problem solver... I am still not too great at it</p>
+    <p class="hero-university">University of Colorado Boulder</p>
+    <p class="hero-bio">
+      But how do the things transport.
+    </p>
+    <div class="hero-links">
+      <a href="https://scholar.google.com/citations?user=M9_pOlQAAAAJ&amp;hl=en" class="hero-link" title="Google Scholar">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-2a5 5 0 1 0 0-10 5 5 0 0 0 0 10zM1 8l11-7 11 7v2H1V8z"/></svg>
+        <span>Scholar</span>
+      </a>
+      <a href="https://www.linkedin.com/in/rituraj314/" class="hero-link" title="LinkedIn">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+        <span>LinkedIn</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="blog-section" id="blog">
+  <h2 class="section-title">Latest Rants</h2>
+  <p class="section-subtitle">Thoughts on science, life, and everything in between.</p>
+
+  <div class="post-cards">
+    {% for post in site.posts %}
+    <a href="{{ post.url | relative_url }}" class="post-card">
+      {% if post.image %}
+      <div class="post-card-image">
+        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+      </div>
+      {% endif %}
+      <div class="post-card-body">
+        <time class="post-card-date">{{ post.date | date: "%B %Y" }}</time>
+        <h3 class="post-card-title">{{ post.title }}</h3>
+        {% if post.subtitle %}
+        <p class="post-card-subtitle">{{ post.subtitle }}</p>
+        {% endif %}
+        <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+        <span class="post-card-link">Read post &rarr;</span>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>

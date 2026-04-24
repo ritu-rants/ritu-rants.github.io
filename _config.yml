@@ -1,0 +1,22 @@
+title: Ritu Rants
+description: "Amaze, amaze, amaze."
+url: ""
+baseurl: ""
+permalink: /:title/
+
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+author:
+  name: Ritu
+  role: "Aspiring problem solver... I am still not too great at it"
+  university: "University of Colorado Boulder"
+  bio: "But how do the things transport."
+  photo: "/assets/images/photo.jpg"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
