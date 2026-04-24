@@ -8,13 +8,13 @@
   --bg-warm: #f5ede3;
   --text: #2a2118;
   --text-muted: #7a6e62;
-  --accent: #c0392b;
-  --accent-hover: #e74c3c;
-  --accent-soft: #f8e8e6;
+  --accent: #3498db;
+  --accent-hover: #5dade2;
+  --accent-soft: #d6eaf8;
   --border: #e0d5c8;
   --shadow: rgba(42, 33, 24, 0.08);
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-body: 'Source Serif 4', Georgia, serif;
+  --font-display: 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -75,7 +75,7 @@ img { max-width: 100%; height: auto; display: block; }
 .hero-photo { flex-shrink: 0; }
 .hero-photo img {
   width: 180px; height: 180px;
-  border-radius: 50%;
+  border-radius: 0;
   object-fit: cover;
   border: 3px solid var(--border);
 }
