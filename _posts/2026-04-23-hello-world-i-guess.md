@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Howdy"
-subtitle: "¿Por qué?."
+subtitle: "¿Por qué?"
 date: 2026-04-23
 ---
 
